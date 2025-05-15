@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import MasterLayout from './layouts/MasterLayout';
-import AllCars from './components/allCars/AllCars'; // Corrected import path
-import PageNotFound from './components/pageNotFound/PageNotFound'; // Corrected import path and casing
+import AllCars from './components/allCars/AllCars';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/carRental"> {/* Add basename prop here */}
       <Routes>
         <Route path="/" element={<MasterLayout />} />
-        <Route path="/carRental/" element={<MasterLayout />} /> {/* Add this line */}
+        {/* The explicit /carRental/ route is removed as basename handles it */}
         <Route path="/all-cars" element={<AllCars />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
