@@ -1,0 +1,33 @@
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.input-group {
+  max-width: 100%;
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: #4d7cff;
+  box-shadow: 0 0 0 0.2rem rgba(77, 124, 255, 0.25);
+}
+
+.btn-primary {
+  background-color: #4d7cff;
+  border-color: #4d7cff;
+}
+
+.btn-primary:hover {
+  background-color: #3a68e0;
+  border-color: #3a68e0;
+}
+
+@media (max-width: 768px) {
+  .search-section {
+    padding: 0 10px;
+  }
+}

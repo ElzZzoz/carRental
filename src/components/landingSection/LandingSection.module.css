@@ -1,0 +1,378 @@
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.landing-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 40px 0; /* Reduced padding */
+}
+
+.landing-content {
+  flex: 1;
+  padding: 0 5%;
+  max-width: 600px;
+}
+
+.landing-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  color: #333;
+}
+
+.landing-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1.5rem; /* Reduced margin */
+  color: #666;
+}
+
+.landing-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  max-width: 50%;
+  position: relative;
+  overflow: visible;
+  height: auto; /* Remove fixed height */
+}
+
+.car-image {
+  width: 100%; /* Reduced from 120% */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(5%); /* Reduced translation */
+}
+
+@media screen and (max-width: 960px) {
+  .landing-content-wrapper {
+    padding: 20px;
+  }
+  
+  .landing-content {
+    margin-bottom: 20px; /* Reduced margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-content-wrapper {
+    padding: 15px;
+  }
+
+  .landing-content {
+    padding: 10px 0;
+  }
+
+  .landing-content h1 {
+    margin-bottom: 10px;
+  }
+
+  .landing-content p {
+    margin-bottom: 15px;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cta-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-height: 50px;
+  width: auto;
+}
+
+.cta-image:hover {
+  transform: scale(1.05);
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #4d7cff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3a68e0;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #4d7cff;
+  border: 2px solid #4d7cff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(77, 124, 255, 0.1);
+}
+
+.landing-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  max-width: 50%;
+  position: relative;
+  overflow: visible;
+}
+
+.car-image {
+  width: 120%;
+  max-width: 120%;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(10%);
+  position: relative;
+  z-index: 1;
+}
+
+.placeholder-image {
+  background-color: #f0f0f0;
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: #999;
+  font-size: 1.5rem;
+  object-fit: contain;
+}
+
+.blue-text {
+  color: #1572d3;
+}
+
+.vector-image {
+  display: block;
+  margin-top: -30px;
+  margin-bottom: 5px;
+  width: 150px;
+  height: auto;
+  transform: translate(185px, 8px);
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    padding: 0 30px;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+  
+  .auth-buttons {
+    display: none;
+  }
+  
+  .landing-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+  
+  .landing-content {
+    padding: 0;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .landing-image {
+    display: none; /* Hide landing image below 960px */
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .vector-image {
+    transform: translate(140px, 8px);
+    width: 120px;
+  }
+  .landing-section{
+    min-height: 20vh;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.fram-logo {
+  height: 35px;
+  width: auto;
+}
+
+
+@media (max-width: 768px) {
+  .landing-content-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .landing-image {
+    display: none; /* Hide by default */
+  }
+
+  /* Show on desktop screens */
+  @media screen and (min-width: 1024px) {
+    .landing-image {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      max-width: 50%;
+      position: relative;
+      overflow: visible;
+    }
+  
+    .car-image {
+      width: 120%;
+      max-width: 120%;
+      height: auto;
+      object-fit: contain;
+      transform: translateX(10%);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .landing-content {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .landing-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+  .landing-section{
+    min-height: 20vh;
+  }
+}
+
+.navbar {
+  width: 100%;
+  background: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  padding: 0;
+}
+
+.navbar-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #4d7cff;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.auth-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #4d7cff;
+}
+
+.signup-btn {
+  background-color: #4d7cff;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #3a68e0;
+}
